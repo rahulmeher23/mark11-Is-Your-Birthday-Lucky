@@ -4,7 +4,7 @@ const checkBtn = document.querySelector(".check-button");
 const message = document.querySelector(".display-msg");
 
 function showMessage (outputMessage) {
-    message.innerText = outputMessage;
+    message.innerHTML = outputMessage;
 }
 
 
@@ -20,7 +20,7 @@ function calculateSum (date) {
 function checkLucky (sum, luckyNo) {
     var lucky = sum % luckyNo;
     if (lucky == 0) {
-        showMessage("Your Birthday Is Lucky!!");
+        showMessage(`<span style="color: #65a30d"> Yay! Your Birthday Is Lucky!!</span>`);
     } else {
         showMessage("Your Birthday Is Not Lucky!!");
     }

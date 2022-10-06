@@ -41,7 +41,7 @@ p {
 #enter-dob {
     display: block;
     margin: 0.5rem auto;
-    padding: 0.5rem;
+    padding: 0.5rem 1.4rem;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
@@ -99,10 +99,14 @@ h3 {
 li {
     display: inline;
     padding: 2rem;
-    margin: 2rem;
+    margin: 0.5rem;
     color: whitesmoke;
 }
 
 a {
     color: whitesmoke;
+}
+
+.output-div {
+    padding: 0.45rem;
 }

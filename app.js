@@ -30,11 +30,22 @@ function checkIfBirthdayIsLucky () {
     const date = dob.value;
     const luckyNo = Number(luckynumber.value);
     const sum = calculateSum(date);
-    if (sum && date) {
-        checkLucky(sum, luckyNo);
-    } else {
-        showMessage("Please enter both the fields!");
-    }
+
+    console.log(dob.value, luckynumber.value, date, luckyNo, typeof(luckynumber.value));
+
+        if (sum && date) {
+            if (luckyNo === 0) {
+                showMessage("Please enter your lucky number.");
+            } else if (luckyNo < 0) {
+                showMessage("Please enter a valid lucky number.");
+            } else {
+                checkLucky(sum, luckyNo);
+            }
+            
+        } else {
+            showMessage("Please enter both the fields!");
+        }
 }
+        
 
 checkBtn.addEventListener("click", checkIfBirthdayIsLucky);

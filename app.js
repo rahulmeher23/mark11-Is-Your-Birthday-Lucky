@@ -36,7 +36,7 @@ function checkIfBirthdayIsLucky () {
         if (sum && date) {
             if (luckyNo === 0) {
                 showMessage("Please enter your lucky number.");
-            } else if (luckyNo < 0) {
+            } else if (luckyNo <= 0) {
                 showMessage("Please enter a valid lucky number.");
             } else {
                 checkLucky(sum, luckyNo);
@@ -45,12 +45,12 @@ function checkIfBirthdayIsLucky () {
         } else {
             if (luckyNo > 0) {
                 showMessage("Please enter the date!");
-            } else if (luckyNo <= 0) {
-               showMessage("Please enter the date and a valid lucky number!");
-            } else {
-                 showMessage("Please enter both the fields!");
+            } else if (luckyNo === 0 && date) {
+                showMessage("Please enter a valid lucky number");
+            }  else if (!luckyNo && !date) {
+                showMessage("Please enter both the fields!");
             }
-           
+            
         }
 }
         

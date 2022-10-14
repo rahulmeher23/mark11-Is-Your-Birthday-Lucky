@@ -43,7 +43,14 @@ function checkIfBirthdayIsLucky () {
             }
             
         } else {
-            showMessage("Please enter both the fields!");
+            if (luckyNo > 0) {
+                showMessage("Please enter the date!");
+            } else if (luckyNo <= 0) {
+               showMessage("Please enter the date and a valid lucky number!");
+            } else {
+                 showMessage("Please enter both the fields!");
+            }
+           
         }
 }
         
